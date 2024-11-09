@@ -27,7 +27,7 @@ public class EmulatorUtilPlugin implements FlutterPlugin, MethodCallHandler {
   @Override
   public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
     if (call.method.equals("isEmulator")) {
-      result.success(!EmulatorCheck.isEmulator());
+      result.success(EmulatorCheck.isEmulator());
     } else {
       result.notImplemented();
     }
